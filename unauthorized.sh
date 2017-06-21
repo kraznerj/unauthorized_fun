@@ -6,7 +6,7 @@
 if [ "$1" == "-h" ]; then
   echo "How to Use:"
   echo "Change Directory to User who is being pranked's home Directory"
-  echo "Add this script and the end the .profile file"
+  echo "Add this script to the end the .profile file"
   echo "Under the script in the .profile file an exit"
   exit 0
 fi

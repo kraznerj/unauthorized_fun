@@ -12,7 +12,7 @@ if [ "$1" == "-h" ]; then
 fi
 
 for (( i = 0; i < 17; i++ ));
-do sleep 0.5 ;echo "$(tput setaf $i)YOU ARE NOT AUTHORIZED!!! $(tput sgr0)";
+do sleep 0.5 ;echo "$(tput setaf $i)YOU ARE NOT AUTHORIZED!!! $(tput sgr0)";printf '\e[3;0;0t'; printf '\e[3;300;0t';
 done
 
 
@@ -20,3 +20,8 @@ done
 #printf '\e[3;0;0t'
 #Minimizes putty window the back up
 #printf '\e[2t' && sleep 3 && printf '\e[1t'
+
+#printf '\033[3;<x>;<y>t'
+#Replace the <x> and <y> with desired coordinates, like:
+
+#printf '\033[3;750;0t'

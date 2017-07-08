@@ -12,7 +12,7 @@ if [ "$1" == "-h" ]; then
 fi
 
 for (( i = 0; i < 17; i++ ));
-do sleep 0.5 ;echo "$(tput setaf $i)YOU ARE NOT AUTHORIZED!!! $(tput sgr0)";printf '\e[3;0;0t'; printf '\e[3;300;0t';
+do sleep 0.5 ;echo "$(tput setaf $i)YOU ARE NOT AUTHORIZED!!! $(tput sgr0)";printf '\e[3;0;0t'; printf '\e[3;1000;0t';
 done
 
 

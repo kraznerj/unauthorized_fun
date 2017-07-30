@@ -3,6 +3,10 @@
 #Made to mess with SSH'd Users
 ###########################################################
 
+if [[ `id -nu` = "root" ]]; then
+  echo "Nope"
+  exit 1
+fi
 if [ "$1" == "-h" ]; then
   echo "How to Use:"
   echo "Change Directory to User who is being pranked's home Directory"

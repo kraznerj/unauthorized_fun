@@ -2,9 +2,13 @@
 ###########################################################
 #Made to mess with SSH'd Users
 ###########################################################
+#Color Variables
+red=`tput setaf 1`
+green=`tput setaf 2`
+reset=`tput sgr0`
 
 if [[ `id -nu` = "root" ]]; then
-  echo "Nope"
+  echo "${red}Nope, denied${reset}"
   exit 1
 fi
 if [ "$1" == "-h" ]; then

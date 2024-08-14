@@ -16,13 +16,20 @@ if [ "$1" == "-h" ]; then
   echo "How to Use:"
   echo "Change Directory to User who is being pranked's home Directory"
   echo "Add this script to the end the .profile file"
-  echo "Under the script in the .profile file an exit"
+  echo "Under the script in the .profile file add an exit"
   exit 0
 fi
 
+#Disable Ctrl+C
+trap '' 2
+
+#Begin "You are not authorized" messages loop
 for (( i = 0; i < 17; i++ ));
 do sleep 0.5 ;echo "$(tput setaf $i)YOU ARE NOT AUTHORIZED!!! $(tput sgr0)";printf '\e[3;0;0t'; printf '\e[3;1000;0t';
 done
+
+#Re-Enable Ctrl+C
+trap 2
 
 #Moves putty window to top left corner
 #printf '\e[3;0;0t'
